@@ -24,6 +24,8 @@ gem 'simple_form'
 # environment gems
 group :development do
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :production do
