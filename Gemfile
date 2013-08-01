@@ -1,38 +1,32 @@
 source 'https://rubygems.org'
 
+# pin gem versions to ruby version
+ruby '1.9.3'
+
+# rails 3 app
 gem 'rails', '3.2.14'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
-
-# Gems used only for assets and not required
-# in production environments by default.
+# asset pipeline gems
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
+  gem "therubyracer"
+  gem "less-rails"
+  gem 'twitter-bootstrap-rails'
 end
 
+# general gems
 gem 'jquery-rails'
+gem 'rb-readline'
+gem 'simple_form'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# environment gems
+group :development do
+  gem 'sqlite3'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+group :production do
+  gem 'pg', '0.16.0'
+  gem 'rails_12factor', '0.0.2'
+end
