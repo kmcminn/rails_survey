@@ -18,8 +18,9 @@ end
 
 # general gems
 gem 'jquery-rails'
-gem 'rb-readline'
+#gem 'rb-readline'
 gem 'simple_form'
+gem 'surveyor'
 
 # environment gems
 group :development do

@@ -8,6 +8,10 @@ capybara-*.html
 .idea*
 /.bundle
 /vendor/bundle
+/vendor/cache
+/vendor/gems
+/vendor/specifications
+/vendor/bin
 /log/*
 /tmp/*
 /db/*.sqlite3
